@@ -2,6 +2,7 @@ package com.koper.petclinic.model;
 
 public class Person {
 
+    private String lastName;
     private String firstName;
 
     public String getFirstName() {
@@ -20,5 +21,4 @@ public class Person {
         this.lastName = lastName;
     }
 
-    private String lastName;
 }

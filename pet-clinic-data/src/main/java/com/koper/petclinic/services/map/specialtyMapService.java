@@ -1,20 +1,20 @@
 package com.koper.petclinic.services.map;
 
-import com.koper.petclinic.model.Speciality;
-import com.koper.petclinic.services.SpecialtiesService;
+import com.koper.petclinic.model.Specialty;
+import com.koper.petclinic.services.SpecialtyService;
 import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
 @Service
-public class SpecialtiesMapService extends AbstractMapService<Speciality, Long> implements SpecialtiesService {
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
-    public Set<Speciality> findAll() {
+    public Set<Specialty> findAll() {
         return super.findAll();
     }
 
     @Override
-    public void delete(Speciality object) {
+    public void delete(Specialty object) {
         super.deleteByObject(object);
     }
 
@@ -24,12 +24,12 @@ public class SpecialtiesMapService extends AbstractMapService<Speciality, Long> 
     }
 
     @Override
-    public Speciality save(Speciality object) {
+    public Specialty save(Specialty object) {
         return super.save(object);
     }
 
     @Override
-    public Speciality findById(Long id) {
+    public Specialty findById(Long id) {
         return super.findById(id);
     }
 }

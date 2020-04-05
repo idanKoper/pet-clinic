@@ -40,7 +40,7 @@ public class VetServiceImpl implements VetService {
     }
 
     @Override
-    public void deletById(Long id) {
+    public void deleteById(Long id) {
         vetRepository.deleteById(id);
     }
 }

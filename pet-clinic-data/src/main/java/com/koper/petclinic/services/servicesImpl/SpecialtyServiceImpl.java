@@ -40,7 +40,7 @@ public class SpecialtyServiceImpl implements SpecialtyService {
     }
 
     @Override
-    public void deletById(Long id) {
+    public void deleteById(Long id) {
         specialtyRepository.deleteById(id);
     }
 }

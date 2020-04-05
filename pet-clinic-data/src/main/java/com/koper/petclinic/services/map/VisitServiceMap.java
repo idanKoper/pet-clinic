@@ -20,7 +20,7 @@ public class VisitServiceMap extends AbstractMapService<Visit,Long> implements V
     }
 
     @Override
-    public void deletById(Long id) {
+    public void deleteById(Long id) {
         super.deleteById(id);
     }
 

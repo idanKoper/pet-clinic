@@ -63,7 +63,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
     }
 
     @Override
-    public void deletById(Long id) {
+    public void deleteById(Long id) {
         super.deleteById(id);
     }
 

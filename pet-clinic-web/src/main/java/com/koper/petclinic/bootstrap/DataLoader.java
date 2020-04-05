@@ -1,10 +1,7 @@
 package com.koper.petclinic.bootstrap;
 
 import com.koper.petclinic.model.*;
-import com.koper.petclinic.services.OwnerService;
-import com.koper.petclinic.services.PetTypeService;
-import com.koper.petclinic.services.SpecialtyService;
-import com.koper.petclinic.services.VetService;
+import com.koper.petclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -17,12 +14,16 @@ public class DataLoader implements CommandLineRunner {
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+
+    //Injected By Constructor
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -84,6 +85,13 @@ public class DataLoader implements CommandLineRunner {
         mikysPet.setName("Flora");
         owner2.getPets().add(mikysPet);
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(idansPet);
+        catVisit.setLocalDate(LocalDate.now());
+        catVisit.setDescription("National Park");
+        visitService.save(catVisit);
+
 
         System.out.println("Load Owners.....");
 

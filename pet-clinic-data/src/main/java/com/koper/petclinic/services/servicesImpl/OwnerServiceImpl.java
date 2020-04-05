@@ -53,7 +53,7 @@ public class OwnerServiceImpl implements OwnerService {
     }
 
     @Override
-    public void deletById(Long id) {
+    public void deleteById(Long id) {
         ownerRepository.deleteById(id);
     }
 }

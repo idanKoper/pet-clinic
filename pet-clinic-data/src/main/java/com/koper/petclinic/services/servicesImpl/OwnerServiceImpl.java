@@ -3,8 +3,8 @@ package com.koper.petclinic.services.servicesImpl;
 import com.koper.petclinic.model.Owner;
 import com.koper.petclinic.repositories.OwnerRepository;
 import com.koper.petclinic.repositories.PetRepository;
+import com.koper.petclinic.repositories.PetTypeRepository;
 import com.koper.petclinic.services.OwnerService;
-import com.koper.petclinic.services.PetService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -23,7 +23,7 @@ public class OwnerServiceImpl implements OwnerService {
     private PetRepository petRepository;
 
     @Autowired
-    private PetService petService;
+    private PetTypeRepository petTypeRepository;
 
     @Override
     public Owner findByLastName(String lastName) {
